@@ -1,4 +1,5 @@
 import { Head } from "next/document";
+import { motion } from "framer-motion";
 import Header from "../components/Header";
 import styles from "../styles/pages/Home.module.css";
 
@@ -9,7 +10,9 @@ export default function Home() {
 
       <div className={styles.container}>
         <Header />
-        <h1>Hello Portfolio</h1>
+        <motion.h1 initial={{ y: -200 }} animate={{ y: 0 }}>
+          Hello Portfolio
+        </motion.h1>
 
         <main></main>
         {/* <CodeIntro /> */}

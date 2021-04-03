@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import styles from "../styles/components/Header.module.css";
+import Logo from "./Logo";
 
 interface Props {}
 const hasWindow = typeof window !== "undefined";
@@ -31,8 +32,9 @@ const Header = () => {
 
   return (
     <header className={styles.container}>
-      <Image src="/img/logo5.svg" alt="Logo" width={80} height={40} />
+      {/* <Image src="/img/logo5.svg" alt="Logo" width={80} height={40} /> */}
 
+      <Logo />
       <nav>
         <Link href="/projects">
           <a>Projects</a>
