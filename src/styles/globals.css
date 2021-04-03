@@ -1,0 +1,30 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  /* Elements */
+  --background: #0f0e17;
+  --eadline: #fffffe;
+  --paragraph: #a7a9be;
+  --button: #ff8906;
+  --button-text: #fffffe;
+  /* Illustration */
+  --stroke: black;
+  --main: #fffffe;
+  --highlight: #ff8906;
+  --secondary: #f25f4c;
+  --tertiary: #e53170;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
