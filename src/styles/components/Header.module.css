@@ -1,4 +1,17 @@
 .container {
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  border: 1px solid var(--paragraph);
+  position: sticky;
+  background: var(--background);
+}
+.container nav {
+  color: var(--headline);
+}
+.container nav a {
+  margin: 0 4px;
 }
 /* // <header className="flex justify-center items-center py-2 md:justify-between md:py-4"> */

@@ -11,6 +11,7 @@ export default function Home() {
         <Header />
         <h1>Hello Portfolio</h1>
 
+        <main></main>
         {/* <CodeIntro /> */}
         {/* </> */}
       </div>

@@ -5,9 +5,10 @@ import { useEffect, useRef, useState } from "react";
 import styles from "../styles/components/Header.module.css";
 
 interface Props {}
-
+const hasWindow = typeof window !== "undefined";
 function getScreenSize() {
-  const { innerWidth: width, innerHeight: height } = window;
+  const width = hasWindow ? window.innerWidth : null;
+  const height = hasWindow ? window.innerHeight : null;
   return {
     width,
     height,
@@ -30,7 +31,7 @@ const Header = () => {
 
   return (
     <header className={styles.container}>
-      <Image src="/img/logo3.svg" alt="Logo" width={155} height={33} />
+      <Image src="/img/logo5.svg" alt="Logo" width={80} height={40} />
 
       <nav>
         <Link href="/projects">
