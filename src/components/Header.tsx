@@ -1,24 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 import styles from "../styles/components/Header.module.css";
 
 interface Props {}
 
+function getScreenSize() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
+}
+
 const Header = () => {
+  const [screenSize, setscreenSize] = useState(getScreenSize());
+
+  //listen to resize
+  useEffect(() => {
+    function handleResize() {
+      setscreenSize(getScreenSize());
+      console.log(screenSize);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <header className={styles.container}>
-      {/* <Image src="/img/logo.svg" alt="Logo" width={155} height={33} /> */}
+      <Image src="/img/logo3.svg" alt="Logo" width={155} height={33} />
 
-      <nav className="hidden md:block space-x-8">
-        <Link href="/nextjs">
-          <a className="tracking-wide hover:text-gray-300">NextJS</a>
+      <nav>
+        <Link href="/projects">
+          <a>Projects</a>
         </Link>
-        <Link href="/tailwind">
-          <a className="tracking-wide hover:text-gray-300">Tailwind</a>
+        <Link href="/skills">
+          <a>Skills</a>
         </Link>
-        <Link href="/framermotion">
-          <a className="tracking-wide hover:text-gray-300">Framer Motion</a>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+        <Link href="/contact">
+          <a>Contact</a>
         </Link>
       </nav>
     </header>
