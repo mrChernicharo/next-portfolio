@@ -2,6 +2,7 @@ import { Head } from "next/document";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import styles from "../styles/pages/Home.module.css";
+import CodeIntro from "../components/CodeIntro";
 
 export default function Home() {
   return (
@@ -14,8 +15,9 @@ export default function Home() {
           Hello Portfolio
         </motion.h1>
 
-        <main></main>
-        {/* <CodeIntro /> */}
+        <main>
+          <CodeIntro />
+        </main>
         {/* </> */}
       </div>
     </>
