@@ -7,7 +7,16 @@
   background: var(--background);
   color: var(--headline);
 }
+.body {
+  padding: 0 2rem;
+}
+.body h1 {
+  font-size: 3rem;
+}
 
+.body h1 p:first-child {
+  margin: 0 0 -1.5rem;
+}
 /* .main {
   padding: 5rem 0;
   flex: 1;

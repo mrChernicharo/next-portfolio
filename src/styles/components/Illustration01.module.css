@@ -1,0 +1,6 @@
+.container {
+  transform: rotateY(180deg) scale(0.8);
+  position: fixed;
+  bottom: -2rem;
+  right: -5rem;
+}

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Header from "../components/Header";
 import styles from "../styles/pages/Home.module.css";
 import CodeIntro from "../components/CodeIntro";
+import Inllustration01 from "../components/Illustration01";
 
 export default function Home() {
   return (
@@ -11,14 +12,25 @@ export default function Home() {
 
       <div className={styles.container}>
         <Header />
-        <motion.h1 initial={{ y: -200 }} animate={{ y: 0 }}>
-          Hello Portfolio
-        </motion.h1>
 
-        <main>
-          <CodeIntro />
-        </main>
-        {/* </> */}
+        <div className={styles.body}>
+          <motion.h1
+            initial={{ x: "-100vw" }}
+            animate={{
+              x: 0,
+              transition: { duration: 2, delay: 2, type: "tween" },
+            }}
+          >
+            <p>Hello, welcome to my portfolio</p>
+
+            <p>I'm Felipe and I ❤︎ to build things with code</p>
+          </motion.h1>
+          <main>
+            <CodeIntro />
+          </main>
+
+          <Inllustration01 />
+        </div>
       </div>
     </>
   );
