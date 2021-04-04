@@ -1,30 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+import styles from "../styles/components/CodeIntro.module.css";
+
 interface Props {}
 
-const introText = [
-  "import * as FelipeChernicharo from ‘software-engineering’;#",
+const introTextArr = [
+  "import { FelipeChernicharo } from ‘software-engineering’;#",
   "var helloStranger = `welcome to my ${Portfolio}`;#",
-  "GladYouHere() {#",
+  "soGladYouHere( ) {#",
   "_{ please: ‘take a look around’ },#",
   "_{ see: ‘a little bit of my work and...’}#",
   "_continue true;#",
-  "}#",
+  "};#",
 ];
-
-let i = 1;
-const divVars = {
-  hidden: { opacity: 0 },
-  done: {
-    opacity: 1,
-    transition: {
-      // duration: 2,
-      // when: "beforeChildren",
-      // staggerChildren: 0.8,
-    },
-  },
-};
 
 const pVars = (delay) => {
   return {
@@ -33,29 +22,50 @@ const pVars = (delay) => {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.02,
-        delay: delay * 1,
+        staggerChildren: 0.03,
+        delay: delay * 2,
       },
     },
   };
 };
 
 const spanVars = {
-  hidden: { opacity: 0 },
-  done: { opacity: 1 },
+  hidden: { display: "none" },
+  done: { display: "inline" },
 };
+
+// function generateClassNames() {
+//   for (let [i, p] of Object.entries(introTextArr)) {
+//     const paragraph = `.container p:nth-child(${Number(i) + 1})`;
+
+//     for (let [j, span] of Object.entries(p.split(""))) {
+//       const spanText = `span:nth-child(${Number(j) + 1})`;
+
+//       console.log(paragraph + spanText);
+//     }
+//   }
+// }
+// generateClassNames();
 
 const CodeIntro = () => {
   return (
-    <motion.div initial="hidden" animate="done" variants={divVars}>
-      {introText.map((line, i) => (
-        <motion.p variants={pVars(i)} key={line + Math.random()}>
+    <motion.div className={styles.container} initial="hidden" animate="done">
+      {introTextArr.map((line, i) => (
+        <motion.p
+          variants={pVars(i)}
+          key={line + Math.random()}
+          className={"p-" + line}
+        >
           {line
             .replace("#", "")
             .replace("_", " ")
             .split("")
             .map((l, i) => (
-              <motion.span variants={spanVars} key={l + Math.random()}>
+              <motion.span
+                className={"span-" + i}
+                variants={spanVars}
+                key={l + Math.random()}
+              >
                 {l}
               </motion.span>
             ))}
