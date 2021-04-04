@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 import styles from "../styles/components/Header.module.css";
 import Logo from "./Logo";
+import { FaHome } from "react-icons/fa";
 
 interface Props {}
 const hasWindow = typeof window !== "undefined";
@@ -34,19 +36,29 @@ const Header = () => {
     <header className={styles.container}>
       {/* <Image src="/img/logo5.svg" alt="Logo" width={80} height={40} /> */}
 
-      <Logo />
+      <div>
+        <Logo />
+        <span>Programmer Portfolio</span>
+      </div>
+
       <nav>
+        <Link href="/">
+          <motion.a>
+            <FaHome size={22} />
+          </motion.a>
+        </Link>
+
         <Link href="/projects">
-          <a>Projects</a>
+          <motion.a>Projects</motion.a>
         </Link>
         <Link href="/skills">
-          <a>Skills</a>
+          <motion.a>Skills</motion.a>
         </Link>
         <Link href="/about">
-          <a>About</a>
+          <motion.a>About</motion.a>
         </Link>
         <Link href="/contact">
-          <a>Contact</a>
+          <motion.a>Contact</motion.a>
         </Link>
       </nav>
     </header>

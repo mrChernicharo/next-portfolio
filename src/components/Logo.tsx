@@ -15,7 +15,7 @@ interface Props {}
 //   },
 // };
 const pathVariants = {
-  hidden: { opacity: 0, pathLength: 0 },
+  hidden: { opacity: 0.5, pathLength: 0 },
   visible: {
     opacity: 0.9,
     pathLength: 1,

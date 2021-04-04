@@ -31,7 +31,7 @@ const pVars = (delay) => {
       transition: {
         when: "beforeChildren",
         staggerChildren: 0.03,
-        delay: delay * 2,
+        delay: delay * 2 + 3,
       },
     },
   };

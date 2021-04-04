@@ -15,15 +15,15 @@ export default function Home() {
 
         <div className={styles.body}>
           <motion.h1
-            initial={{ x: "-100vw" }}
+            initial={{ y: "-100vh" }}
             animate={{
-              x: 0,
-              transition: { duration: 2, delay: 2, type: "tween" },
+              y: 0,
+              transition: { type: "spring", damping: 8 },
             }}
           >
-            <p>Hello, welcome to my portfolio</p>
+            <p>Welcome to my portfolio</p>
 
-            <p>I'm Felipe and I ❤︎ to build things with code</p>
+            <p>{`I'm Felipe and I ❤︎ to build things with { code } `}</p>
           </motion.h1>
           <main>
             <CodeIntro />

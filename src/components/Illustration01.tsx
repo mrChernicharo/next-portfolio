@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 import styles from "../styles/components/Illustration01.module.css";
@@ -6,7 +7,11 @@ interface Props {}
 
 const Illustration01 = () => {
   return (
-    <div className={styles.container}>
+    <motion.div
+      // initial={{ y: "100vh", opacity: 0 }}
+      // animate={{ y: 30, opacity: 0.7 }}
+      className={styles.container}
+    >
       <svg
         id="ab415205-3fab-4e47-acc0-4eae005b7b6b"
         data-name="Layer 1"
@@ -665,7 +670,7 @@ const Illustration01 = () => {
           fill="#2f2e41"
         />
       </svg>
-    </div>
+    </motion.div>
   );
 };
 

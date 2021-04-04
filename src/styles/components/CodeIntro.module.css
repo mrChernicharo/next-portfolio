@@ -6,18 +6,19 @@
   min-height: 20rem;
   min-width: 20rem;
   padding: 16px;
-  border: 4px double var(--highlight);
+  /* border: 4px double var(--highlight); */
   border-radius: 6px;
+  /* background: var(--background); */
+}
+
+@media screen and (max-width: 520px) {
+  .container {
+    font-size: 0.5rem;
+  }
 }
 .container p:nth-child(1) span:nth-child(1) {
   color: var(--tertiary);
-
-  /* color: var(--main);
-  color: var(--highlight);
-  color: var(--tertiary);
-  color: var(--secondary); */
 }
-
 .container p:nth-child(1) span:nth-child(2) {
   color: var(--tertiary);
 }

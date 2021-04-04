@@ -8,10 +8,21 @@
   position: sticky;
   background: var(--background);
 }
+.container div {
+  display: flex;
+  align-items: center;
+}
+
+.container span {
+  font-family: "Press Start 2P", cursive;
+  margin-left: 1rem;
+}
 .container nav {
   color: var(--headline);
 }
 .container nav a {
-  margin: 0 4px;
+  margin: 0 0.5rem;
+  color: var(--highlight);
+  cursor: pointer;
 }
 /* // <header className="flex justify-center items-center py-2 md:justify-between md:py-4"> */
