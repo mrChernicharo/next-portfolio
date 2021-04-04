@@ -21,9 +21,12 @@ export default function Home() {
               transition: { type: "spring", damping: 8 },
             }}
           >
-            <p>Welcome to my portfolio</p>
+            <p>Hi, I'm Felipe</p>
 
-            <p>{`I'm Felipe and I ❤︎ to build things with { code } `}</p>
+            <p>
+              and I <span>❤︎ </span>
+              to build things with <span>{`{ code }`}</span>
+            </p>
           </motion.h1>
           <main>
             <CodeIntro />
