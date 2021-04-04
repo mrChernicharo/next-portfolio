@@ -28,8 +28,6 @@ export default function Home() {
           <main>
             <CodeIntro />
           </main>
-
-          <Inllustration01 />
         </div>
       </div>
     </>
