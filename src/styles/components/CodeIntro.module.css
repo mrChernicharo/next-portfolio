@@ -397,13 +397,15 @@
   color: var(--paragraph);
 }
 .container p:nth-child(3) span:nth-child(18) {
-  color: var(--tertiary);
+  color: var(--paragraph);
 }
 .container p:nth-child(3) span:nth-child(19) {
-  color: var(--tertiary);
+  color: var(--paragraph);
 }
-/* ************************ */
-
+/* 4 ********************************************* */
+.container p:nth-child(4) {
+  padding-left: 1.5rem;
+}
 .container p:nth-child(4) span:nth-child(1) {
   color: var(--paragraph);
 }
@@ -510,8 +512,10 @@
   color: var(--paragraph);
 }
 
-/* *********************************************** */
-
+/* 5 *********************************************** */
+.container p:nth-child(5) {
+  padding-left: 1.5rem;
+}
 .container p:nth-child(5) span:nth-child(1) {
   color: var(--paragraph);
 }
@@ -639,8 +643,10 @@
   color: var(--paragraph);
 }
 
-/* *************************************************** */
-
+/* 6 *************************************************** */
+.container p:nth-child(6) {
+  padding-left: 1.5rem;
+}
 .container p:nth-child(6) span:nth-child(1) {
   color: var(--paragraph);
 }
@@ -666,10 +672,10 @@
   color: var(--tertiary);
 }
 .container p:nth-child(6) span:nth-child(9) {
-  color: var(--tertiary);
+  color: var(--secondary);
 }
 .container p:nth-child(6) span:nth-child(10) {
-  /* color: var(--tertiary); */
+  color: var(--secondary);
 }
 .container p:nth-child(6) span:nth-child(11) {
   color: var(--secondary);
@@ -687,10 +693,44 @@
   color: var(--secondary);
 }
 .container p:nth-child(6) span:nth-child(16) {
+  color: var(--secondary);
+}
+
+.container p:nth-child(6) span:nth-child(17) {
+  color: var(--secondary);
+}
+.container p:nth-child(6) span:nth-child(18) {
+  color: var(--secondary);
+}
+.container p:nth-child(6) span:nth-child(19) {
+  color: var(--secondary);
+}
+.container p:nth-child(6) span:nth-child(20) {
+  color: var(--secondary);
+}
+.container p:nth-child(6) span:nth-child(21) {
+  color: var(--secondary);
+}
+.container p:nth-child(6) span:nth-child(22) {
+  color: var(--secondary);
+}
+.container p:nth-child(6) span:nth-child(23) {
+  color: var(--secondary);
+}
+
+.container p:nth-child(6) span:nth-child(24) {
   color: var(--paragraph);
 }
+.container p:nth-child(6) span:nth-child(25) {
+  color: var(--paragraph);
+}
+
+.container p:nth-child(6) span:nth-child(26) {
+  color: var(--paragraph);
+}
+/* ************************************ */
 .container p:nth-child(7) span:nth-child(1) {
-  color: var(--tertiary);
+  color: var(--paragraph);
 }
 .container p:nth-child(7) span:nth-child(2) {
   color: var(--paragraph);
