@@ -7,6 +7,7 @@ import Inllustration01 from "../components/Illustration01";
 import { getXPTime } from "../utils/date-helpers";
 import { skillsData, Skill } from "../data/skills";
 import styles from "../styles/pages/Skills.module.css";
+import ParkIllustration from "../ilustrations/park";
 
 interface SkillProps {
   skill: Skill;
@@ -27,7 +28,7 @@ export default function skills() {
         ))}
       </main>
 
-      <Inllustration01 />
+      <ParkIllustration />
     </div>
   );
 }
