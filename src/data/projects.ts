@@ -1,9 +1,13 @@
+import { Skill, skillsList } from "./skills";
+
 export interface Project {
   title: string;
   description: string;
   github: string;
+  techs: Skill[];
   url?: string;
   gif?: string;
+  video?: string;
 }
 
 export const appGifs = {
@@ -15,7 +19,34 @@ export const appGifs = {
   angularCrud: "gifs/angular_crud.gif",
   ecoleta: "gifs/ecoleta.gif",
 };
+
+const appVideos = {
+  pizzajoint: "videos/pizza.mp4",
+  beatMaker: "videos/beat-maker.mp4",
+};
+
+console.log(skillsList);
+
 export const appProjects = [
+  {
+    title: "Real Beat Maker",
+    description: "Beat Maker app",
+    github: "https://github.com/mrChernicharo/next-beat-maker",
+    url: "https://real-beat-maker.vercel.app/",
+    gif: null,
+    video: appVideos.beatMaker,
+    techs: [skillsList["Typescript"], skillsList["React"]],
+  },
+  {
+    title: "Pizza Joint",
+    description:
+      "An Animations driven website built with React and the amazing Framer Motion",
+    github: "https://github.com/mrChernicharo/framer-motion-pizzajoint",
+    url: null,
+    gif: null,
+    video: appVideos.pizzajoint,
+    techs: [skillsList["Javascript"], skillsList["React"]],
+  },
   {
     title: "Angular CRUD",
     description:
@@ -23,6 +54,8 @@ export const appProjects = [
     github: "https://github.com/mrChernicharo/angular-crud",
     url: null,
     gif: appGifs.angularCrud,
+    video: null,
+    techs: [skillsList["Typescript"], skillsList["Angular"]],
   },
   {
     title: "GoMarketplace",
@@ -31,6 +64,8 @@ export const appProjects = [
     github: "https://github.com/mrChernicharo/goMarketplace",
     url: null,
     gif: appGifs.goMarketplace,
+    video: null,
+    techs: [skillsList["React Native"]],
   },
   {
     title: "I-Recipe",
@@ -39,6 +74,8 @@ export const appProjects = [
     github: "https://github.com/mrChernicharo/iRecipe",
     url: null,
     gif: appGifs.iRecipe,
+    video: null,
+    techs: [skillsList["Typescript"], skillsList["Angular"]],
   },
   {
     title: "Ecoleta",
@@ -47,6 +84,8 @@ export const appProjects = [
     github: "https://github.com/mrChernicharo/ecoleta",
     url: null,
     gif: appGifs.ecoleta,
+    video: null,
+    techs: [skillsList["React Native"]],
   },
   {
     title: "Mosquito Killer",
@@ -55,6 +94,8 @@ export const appProjects = [
     github: "https://www.github.com/mrChernicharo/pygame-pca",
     url: null,
     gif: appGifs.mosquitoKiller,
+    video: null,
+    techs: [skillsList["Python"]],
   },
   {
     title: "Car Rush",
@@ -63,6 +104,8 @@ export const appProjects = [
     github: "https://www.github.com/mrChernicharo/car-rush",
     url: null,
     gif: appGifs.carRush,
+    video: null,
+    techs: [skillsList["Python"]],
   },
   {
     title: "App Lista Tarefas",
@@ -71,6 +114,8 @@ export const appProjects = [
     github: "https://www.github.com/mrChernicharo/app-lista-tarefas",
     url: null,
     gif: appGifs.phpTodoApp,
+    video: null,
+    techs: [skillsList["Php"]],
   },
   // { title: '', description:'', gif: goMarketplace },
 ];

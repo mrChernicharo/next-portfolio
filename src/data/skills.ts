@@ -6,16 +6,23 @@ export interface Skill {
     | "language"
     | "framework"
     | "backend"
-    | "lib"
-    | "platform"
+    | "library"
     | "tool"
-    | "soft";
+    | "soft skills";
   start: Date;
   xpTime: string; // 1 year and 3 months;
   logo: string;
   level: 2 | 3 | 4 | 5;
   // category: string;
 }
+
+const skillsListFactory = (data: Skill[]) => {
+  return data.reduce((acc, skill) => {
+    acc[skill.name] = { ...skill };
+
+    return acc;
+  }, {});
+};
 
 export const skillsData: Skill[] = [
   {
@@ -310,3 +317,13 @@ export const skillsData: Skill[] = [
 ].map((item) => {
   return { ...item, xpTime: getXPTime(item.start) } as Skill;
 });
+
+export const skillsList: Object = skillsListFactory(skillsData);
+
+export const techCategories: string[] = skillsData.reduce((acc, tech) => {
+  if (!acc.find((item) => item.category === tech.category)) {
+    acc.push(tech.category);
+
+    return acc;
+  }
+}, []);

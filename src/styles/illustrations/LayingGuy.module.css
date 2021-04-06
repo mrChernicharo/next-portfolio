@@ -1,0 +1,40 @@
+.container {
+  --scale: 0.6;
+  animation: enter 2s;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0.8;
+  transform-origin: bottom right;
+  transform: scale(var(--scale)) translateY(0px);
+}
+
+@media screen and (max-width: 826px) {
+  .container {
+    --scale: 0.5;
+    transform: scale(var(--scale));
+  }
+}
+
+@media screen and (max-width: 646px) {
+  .container {
+    --scale: 0.42;
+
+    transform: scale(var(--scale));
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    opacity: 0.26;
+  }
+}
+
+@keyframes enter {
+  0% {
+    transform: scale(var(--scale)) translateY(400px);
+  }
+  100% {
+    transform: scale(var(--scale)) translateY(0px);
+  }
+}

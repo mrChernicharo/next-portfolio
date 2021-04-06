@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import Header from "../components/Header";
-import Inllustration01 from "../components/Illustration01";
 
 import { getXPTime } from "../utils/date-helpers";
 import { skillsData, Skill } from "../data/skills";

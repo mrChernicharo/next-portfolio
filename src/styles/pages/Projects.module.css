@@ -3,3 +3,16 @@
   color: var(--paragraph);
   min-height: 100vh;
 }
+
+.container main {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.item {
+  box-shadow: 10px 5px 33px -7px rgba(167, 169, 190, 0.66);
+  -webkit-box-shadow: 10px 5px 33px -7px rgba(167, 169, 190, 0.66);
+  -moz-box-shadow: 10px 5px 33px -7px rgba(167, 169, 190, 0.66);
+}

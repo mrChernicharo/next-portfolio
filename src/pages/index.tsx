@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Header from "../components/Header";
 import styles from "../styles/pages/Home.module.css";
 import CodeIntro from "../components/CodeIntro";
-import Inllustration01 from "../components/Illustration01";
+import LayingGuy from "../ilustrations/layingGuy";
 
 export default function Home() {
   return (
@@ -31,6 +31,8 @@ export default function Home() {
           <main>
             <CodeIntro />
           </main>
+
+          <LayingGuy />
         </div>
       </div>
     </>
