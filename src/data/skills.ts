@@ -3,11 +3,11 @@ import { getXPTime } from "../utils/date-helpers";
 export interface Skill {
   name: string;
   category:
-    | "language"
-    | "framework"
+    | "languages"
+    | "frameworks"
     | "backend"
-    | "library"
-    | "tool"
+    | "libraries"
+    | "tools"
     | "soft skills";
   start: Date;
   xpTime: string; // 1 year and 3 months;
@@ -27,7 +27,7 @@ const skillsListFactory = (data: Skill[]) => {
 export const skillsData: Skill[] = [
   {
     name: "Javascript",
-    category: "language",
+    category: "languages",
     start: new Date(2019, 5, 23),
     xpTime: "",
     logo: "icons/javascript.svg",
@@ -35,7 +35,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Typescript",
-    category: "language",
+    category: "languages",
     start: new Date(2020, 3, 12),
     xpTime: "",
     logo: "icons/typescript.svg",
@@ -43,7 +43,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Html",
-    category: "language",
+    category: "languages",
     start: new Date(2018, 10, 2),
     xpTime: "",
     logo: "icons/html5.svg",
@@ -51,7 +51,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Css",
-    category: "language",
+    category: "languages",
     start: new Date(2018, 10, 18),
     xpTime: "",
     logo: "icons/css.svg",
@@ -59,11 +59,11 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Python",
-    category: "language",
+    category: "languages",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/python.svg",
-    level: 5,
+    level: 3,
   },
   {
     name: "SQL",
@@ -71,19 +71,19 @@ export const skillsData: Skill[] = [
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/database.svg",
-    level: 5,
+    level: 3,
   },
   {
     name: "Angular",
-    category: "framework",
+    category: "frameworks",
     start: new Date(2020, 4, 1),
     xpTime: "",
     logo: "icons/angular.ico",
-    level: 5,
+    level: 4,
   },
   {
     name: "RxJS",
-    category: "lib",
+    category: "libraries",
     start: new Date(2020, 4, 21),
     xpTime: "",
     logo: "icons/rxjs.svg",
@@ -91,7 +91,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "React",
-    category: "framework",
+    category: "frameworks",
     start: new Date(2019, 3, 1),
     xpTime: "",
     logo: "icons/react.svg",
@@ -99,7 +99,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "React Native",
-    category: "framework",
+    category: "frameworks",
     start: new Date(2019, 3, 11),
     xpTime: "",
     logo: "icons/react-native.svg",
@@ -107,7 +107,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Php",
-    category: "language",
+    category: "languages",
     start: new Date(2018, 10, 21),
     xpTime: "",
     logo: "icons/php.svg",
@@ -115,7 +115,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Apple",
-    category: "platform",
+    category: "platforms",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/apple.svg",
@@ -123,7 +123,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Visual Studio Code",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/vscode.png",
@@ -180,7 +180,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Oh my ZSH",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/zsh.jpg",
@@ -188,7 +188,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Bash",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/bash.png",
@@ -196,7 +196,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Vim",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/vim.svg",
@@ -204,7 +204,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "ngRx",
-    category: "lib",
+    category: "libraries",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/ngRx.svg",
@@ -212,7 +212,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "GitHub",
-    category: "platform",
+    category: "platforms",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/github.svg",
@@ -220,7 +220,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "GitLab",
-    category: "platform",
+    category: "platforms",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/gitlab-tile.svg",
@@ -228,7 +228,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "firebase",
-    category: "platform",
+    category: "platforms",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/firebase.png",
@@ -236,7 +236,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Material Design",
-    category: "lib",
+    category: "libraries",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/material.png",
@@ -244,7 +244,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Bootstrap",
-    category: "lib",
+    category: "libraries",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/bootstrap.svg",
@@ -252,7 +252,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Sass",
-    category: "framework",
+    category: "frameworks",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/sass.png",
@@ -260,7 +260,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Mobirise",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/mobirise.png",
@@ -268,7 +268,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Figma",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/figma.svg",
@@ -284,7 +284,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Insomnia",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/insomnia.svg",
@@ -292,7 +292,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Wamp",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/wamp.svg",
@@ -300,7 +300,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Mamp",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/mamp.png",
@@ -308,7 +308,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Notion",
-    category: "tool",
+    category: "tools",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/notion.svg",
@@ -321,9 +321,8 @@ export const skillsData: Skill[] = [
 export const skillsList: Object = skillsListFactory(skillsData);
 
 export const techCategories: string[] = skillsData.reduce((acc, tech) => {
-  if (!acc.find((item) => item.category === tech.category)) {
+  if (!acc.find((category) => category === tech.category)) {
     acc.push(tech.category);
-
-    return acc;
   }
+  return acc;
 }, []);
