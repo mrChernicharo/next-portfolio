@@ -494,6 +494,14 @@ export const skillsData: Skill[] = [
     level: 8,
   },
   {
+    name: "Styled Components",
+    category: "libraries",
+    start: new Date(2020, 4, 19),
+    xpTime: "",
+    logo: "icons/styled-components.svg",
+    level: 10,
+  },
+  {
     name: "SqLite",
     category: "databases",
     start: new Date(2020, 5, 11),
@@ -520,10 +528,10 @@ export const skillsData: Skill[] = [
   {
     name: "three",
     category: "libraries",
-    start: new Date(2019, 5, 11),
+    start: new Date(2021, 3, 2),
     xpTime: "",
     logo: "icons/three.png",
-    level: 7,
+    level: 4,
   },
   {
     name: "Typescript",
