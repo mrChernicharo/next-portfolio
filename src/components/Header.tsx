@@ -44,7 +44,8 @@ const Header = () => {
       <nav>
         <Link href="/">
           <motion.a>
-            <FaHome size={22} />
+            {/* <FaHome size={22} /> */}
+            Home
           </motion.a>
         </Link>
 

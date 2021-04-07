@@ -31,24 +31,35 @@ function ContactForm() {
     endpoint: "https://formspree.io/f/mbjqjgkw",
   });
   if (state.succeeded) {
-    return <p>Thanks for your message!</p>;
+    return (
+      <div className={styles.contactForm}>
+        <p>Thanks for your message!</p>
+      </div>
+    );
   }
   return (
-    <form
-      onSubmit={handleSubmit}
-      method="POST"
-      action="https://formspree.io/f/mbjqjgkw"
-    >
-      <label htmlFor="email">Email Address</label>
-      <input id="email" type="email" name="email" />
-      <ValidationError prefix="Email" field="email" errors={state.errors} />
+    <div className={styles.contactForm}>
+      <form
+        onSubmit={handleSubmit}
+        method="POST"
+        action="https://formspree.io/f/mbjqjgkw"
+      >
+        <label htmlFor="email">Email Address</label>
+        <input id="email" type="email" name="email" />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-      <textarea id="message" name="message" />
-      <ValidationError prefix="Message" field="message" errors={state.errors} />
+        <label htmlFor="message">Your Message</label>
+        <textarea id="message" name="message" />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
 
-      <button type="submit" disabled={state.submitting}>
-        Submit
-      </button>
-    </form>
+        <button type="submit" disabled={state.submitting}>
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }

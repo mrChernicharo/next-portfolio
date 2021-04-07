@@ -68,11 +68,19 @@ export const skillsData: Skill[] = [
   },
   {
     name: "SQL",
-    category: "backend",
+    category: "languages",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/database.svg",
     level: 3,
+  },
+  {
+    name: "Php",
+    category: "languages",
+    start: new Date(2018, 10, 21),
+    xpTime: "",
+    logo: "icons/php.svg",
+    level: 2,
   },
   {
     name: "Angular",
@@ -104,14 +112,6 @@ export const skillsData: Skill[] = [
     start: new Date(2019, 3, 11),
     xpTime: "",
     logo: "icons/react-native.svg",
-    level: 5,
-  },
-  {
-    name: "Php",
-    category: "languages",
-    start: new Date(2018, 10, 21),
-    xpTime: "",
-    logo: "icons/php.svg",
     level: 5,
   },
   {

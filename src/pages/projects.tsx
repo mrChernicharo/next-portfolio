@@ -58,7 +58,7 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
       {project.techs.length && (
         <div>
           {project.techs.map((tech) => (
-            <div>
+            <div key={tech.name}>
               <span>{tech.name}</span>
               <img src={tech.logo} width={16} />
             </div>

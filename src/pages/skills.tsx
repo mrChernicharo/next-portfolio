@@ -56,7 +56,7 @@ export default function skills() {
         {techCategories.map((category) => {
           return (
             category === selectedCategory && (
-              <section>
+              <section key={`section-${category}`}>
                 <nav>
                   <button onClick={prevBtnPress} type="button">
                     <FaChevronLeft />
@@ -67,14 +67,12 @@ export default function skills() {
                   </button>
                 </nav>
 
-                <Category key={category} category={category} />
+                <Category key={`category-${category}`} category={category} />
               </section>
             )
           );
         })}
       </main>
-
-      <ParkIllustration />
     </div>
   );
 }
@@ -99,7 +97,7 @@ const Category: React.FC<CategoryProps> = ({ category }: CategoryProps) => {
       <ul>
         {categorySkills.current.map((skill) => {
           return (
-            <li onClick={() => handleClick(skill)}>
+            <li key={`li-${skill.name}`} onClick={() => handleClick(skill)}>
               <SkillItem key={skill.name} skill={skill} />
             </li>
           );
@@ -124,20 +122,37 @@ const SkillItem: React.FC<SkillProps> = ({ skill }: SkillProps) => {
 };
 
 const SkillDetail: React.FC<SkillProps> = ({ skill }: SkillProps) => {
-  const starsArr = Array(5)
+  const isEven = (number: number) => {
+    return number % 2 === 0;
+  };
+  const starsArr = Array(10) // [1,1,1,1,1,1,1,0,0,0]
     .fill(0)
     .map((item, i) => (skill.level > i ? 1 : 0));
 
   return (
-    <div>
+    <div className={styles.detail}>
       <h1>{skill.name}</h1>
 
       <motion.img src={skill.logo} width={60} height={60} />
 
       <p>{skill.xpTime}</p>
 
-      {starsArr.map((number) => {
-        return number === 1 ? <FaStarOfLife size={20} /> : <FaStar size={20} />;
+      {starsArr.map((number, i) => {
+        return (
+          <>
+            {number === 1 ? (
+              isEven(i) ? (
+                <FaStarHalf className={styles.star} size={20} color={"#fff"} />
+              ) : (
+                <FaStarHalf className={styles.star} size={20} color={"#fff"} />
+              )
+            ) : !isEven(i) ? (
+              <FaStarHalf className={styles.star} size={20} color={"#336"} />
+            ) : (
+              <FaStarHalf className={styles.star} size={20} color={"#336"} />
+            )}
+          </>
+        );
       })}
     </div>
   );

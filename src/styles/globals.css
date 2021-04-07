@@ -44,16 +44,41 @@ a {
 
 button {
   color: var(--text);
-  background: var(--button);
+  background: var(--highlight);
   border: 2px solid var(--paragraph);
   font-weight: bold;
   border-radius: 1.25rem;
   height: 2.25rem;
-  min-width: 6.5rem;
+  min-width: 4.5rem;
   cursor: pointer;
   transition: 0.3s;
+  outline: none;
 }
 
 button:hover {
   opacity: 0.8;
+  color: var(--text);
+  background: var(--secondary);
+}
+
+input,
+textarea {
+  color: var(--text);
+  background: var(--highlight);
+  border: 2px solid var(--paragraph);
+  font-weight: bold;
+  border-radius: 1.25rem 1.25rem 0rem 1.25rem;
+  min-height: 2.25rem;
+  min-width: 4.5rem;
+  cursor: pointer;
+  outline: none;
+  padding: 0 1rem;
+}
+
+textarea {
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
 }

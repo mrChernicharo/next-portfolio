@@ -3,3 +3,11 @@
   color: var(--paragraph);
   min-height: 100vh;
 }
+
+.contactForm {
+  border: 1px solid var(--paragraph);
+}
+
+.contactForm form {
+  display: flex;
+}

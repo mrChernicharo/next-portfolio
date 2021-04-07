@@ -47,3 +47,15 @@
   grid-template-columns: repeat(6, 1fr);
   list-style: none;
 }
+
+.detail {
+  border: 1px solid var(--paragraph);
+}
+.star {
+  position: relative;
+  border: 1px solid var(--paragraph);
+}
+
+.star:nth-of-type(even) {
+  transform: rotateY(180deg);
+}
