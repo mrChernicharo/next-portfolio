@@ -15,9 +15,11 @@ const About = () => {
         <h1>About</h1>
       </main>
 
-      <Link href="https://mrchernicharo.github.io/curriculum/">
-        <a target="_blank">CV</a>
-      </Link>
+      <button type="button">
+        <Link href="https://mrchernicharo.github.io/curriculum/">
+          <a target="_blank">CV</a>
+        </Link>
+      </button>
     </div>
   );
 };

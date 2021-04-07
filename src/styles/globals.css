@@ -13,6 +13,10 @@
   --tertiary: #e53170;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -20,6 +24,7 @@ body {
   font-family: "Inter", sans-serif;
   background: var(--background);
 }
+
 @media (max-width: 1080px) {
   html {
     font-size: 93.75%;
@@ -37,6 +42,18 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+button {
+  color: var(--text);
+  background: var(--button);
+  border: 2px solid var(--paragraph);
+  font-weight: bold;
+  border-radius: 1.25rem;
+  height: 2.25rem;
+  min-width: 6.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
 }

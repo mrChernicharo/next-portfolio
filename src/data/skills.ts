@@ -328,7 +328,7 @@ export const skillsData: Skill[] = [
     category: "libraries",
     start: new Date(2019, 5, 11),
     xpTime: "",
-    logo: "icons/axios.png",
+    logo: "icons/axios.svg",
     level: 4,
   },
   {
@@ -360,7 +360,7 @@ export const skillsData: Skill[] = [
     category: "libraries",
     start: new Date(2019, 5, 11),
     xpTime: "",
-    logo: "icons/echarts.png",
+    logo: "icons/echarts.svg",
     level: 4,
   },
   {
@@ -376,7 +376,7 @@ export const skillsData: Skill[] = [
     category: "libraries",
     start: new Date(2019, 5, 11),
     xpTime: "",
-    logo: "icons/framer-motion.jpeg",
+    logo: "icons/framer-motion.svg",
     level: 4,
   },
   {
@@ -520,7 +520,7 @@ export const skillsData: Skill[] = [
     category: "frameworks",
     start: new Date(2019, 5, 11),
     xpTime: "",
-    logo: "icons/vue.png",
+    logo: "icons/vue.svg",
     level: 4,
   },
   {
