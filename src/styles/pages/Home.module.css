@@ -6,6 +6,7 @@
   align-items: center;
   background: var(--background);
   color: var(--headline);
+  padding-top: 4rem;
 }
 .body {
   padding: 0 2rem;

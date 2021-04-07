@@ -70,7 +70,7 @@ export const appProjects: Project[] = [
   {
     title: "I-Recipe",
     description:
-      "Complete App covering most of Angular's features: Authenticate, create recipes, store and fetch them from the backend. Using different techniques like Services/Subjects and also NgRx Reducers, Actions and Effects. Strorage and Authentication provided by Firebase APIs integration.",
+      "Complete App covering most of Angular's features: Authenticate, create recipes, store and fetch them from the databases. Using different techniques like Services/Subjects and also NgRx Reducers, Actions and Effects. Strorage and Authentication provided by Firebase APIs integration.",
     github: "https://github.com/mrChernicharo/iRecipe",
     url: null,
     gif: appGifs.iRecipe,

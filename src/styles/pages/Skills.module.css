@@ -2,6 +2,7 @@
   background: var(--background);
   color: var(--paragraph);
   min-height: 100vh;
+  padding-top: 4rem;
 }
 
 .container main {
@@ -13,13 +14,13 @@
   width: 100%;
 }
 
-.container nav {
+.container menu {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
 }
 
-.container nav button {
+.container menu button {
   color: var(--text);
   background: transparent;
   border: none;
@@ -28,22 +29,21 @@
   outline: none;
 }
 
-.container nav button:hover {
+.container menu button:hover {
   opacity: 0.7;
 }
 
-.container nav button:active {
+.container menu button:active {
   color: var(--highlight);
 }
 
 .category {
-  border: 1px solid var(--text);
-  min-height: calc(100vh - 12.2rem);
+  /* border: 1px solid var(--text); */
   width: 100%;
 }
 
 .category ul {
-  border: 1px solid var(--paragraph);
+  /* border: 1px solid var(--paragraph); */
   width: fit-content;
   padding: 1rem;
   margin: 0 auto;
@@ -97,7 +97,7 @@
 }
 
 .detail {
-  border: 1px solid var(--paragraph);
+  /* border: 1px solid var(--paragraph); */
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -105,7 +105,7 @@
   align-items: center;
 }
 .starsContainer {
-  border: 1px solid var(--paragraph);
+  /* border: 1px solid var(--paragraph); */
   min-width: 278px;
   padding-left: 76px;
 }

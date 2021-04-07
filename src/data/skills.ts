@@ -5,7 +5,7 @@ export interface Skill {
   category:
     | "languages"
     | "frameworks"
-    | "backend"
+    | "databases"
     | "libraries"
     | "platforms"
     | "tools"
@@ -31,7 +31,7 @@ export const skillsData: Skill[] = [
     category: "frameworks",
     start: new Date(2020, 4, 1),
     xpTime: "",
-    logo: "icons/angular.ico",
+    logo: "icons/angular.svg",
     level: 8,
   },
   {
@@ -148,7 +148,7 @@ export const skillsData: Skill[] = [
   // },
   {
     name: "DBeaver",
-    category: "backend",
+    category: "tools",
     start: new Date(2020, 7, 11),
     xpTime: "",
     logo: "icons/dbeaver.svg",
@@ -156,7 +156,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Docker",
-    category: "backend",
+    category: "tools",
     start: new Date(2020, 3, 25),
     xpTime: "",
     logo: "icons/docker.svg",
@@ -175,8 +175,16 @@ export const skillsData: Skill[] = [
     category: "platforms",
     start: new Date(2020, 6, 22),
     xpTime: "",
-    logo: "icons/firebase.png",
+    logo: "icons/firebase.svg",
     level: 9,
+  },
+  {
+    name: "firestore",
+    category: "databases",
+    start: new Date(2020, 5, 22),
+    xpTime: "",
+    logo: "icons/firestore.png",
+    level: 10,
   },
   {
     name: "Git",
@@ -244,7 +252,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "MySQL",
-    category: "backend",
+    category: "databases",
     start: new Date(2019, 5, 11),
     xpTime: "",
     logo: "icons/mysql.svg",
@@ -252,7 +260,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "MongoDB",
-    category: "backend",
+    category: "databases",
     start: new Date(2020, 1, 30),
     xpTime: "",
     logo: "icons/mongodb.svg",
@@ -301,6 +309,14 @@ export const skillsData: Skill[] = [
     level: 7,
   },
   {
+    name: "Realtime DB",
+    category: "databases",
+    start: new Date(2020, 0, 20),
+    xpTime: "",
+    logo: "icons/realtime-db.png",
+    level: 9,
+  },
+  {
     name: "RxJS",
     category: "libraries",
     start: new Date(2020, 11, 21),
@@ -326,7 +342,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Node",
-    category: "backend",
+    category: "frameworks",
     start: new Date(2019, 10, 21),
     xpTime: "",
     logo: "icons/node.svg",
@@ -431,7 +447,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "Postgres",
-    category: "backend",
+    category: "databases",
     start: new Date(2020, 2, 21),
     xpTime: "",
     logo: "icons/postgres.svg",
@@ -462,6 +478,14 @@ export const skillsData: Skill[] = [
     level: 7,
   },
   {
+    name: "redis",
+    category: "databases",
+    start: new Date(2019, 5, 11),
+    xpTime: "",
+    logo: "icons/redis.svg",
+    level: 7,
+  },
+  {
     name: "Sass",
     category: "frameworks",
     start: new Date(2020, 7, 9),
@@ -471,7 +495,7 @@ export const skillsData: Skill[] = [
   },
   {
     name: "SqLite",
-    category: "backend",
+    category: "databases",
     start: new Date(2020, 5, 11),
     xpTime: "",
     logo: "icons/sqlite.png",

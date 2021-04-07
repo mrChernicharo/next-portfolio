@@ -11,7 +11,7 @@ const introTextArr = [
   "soGladYouHere( ) {#",
   "_{ please: ‘take a look around’ },#",
   "_{ see: ‘a little bit of my work and...’}#",
-  "_return whenEverYouLike();#",
+  "_return wheneverYouLike();#",
   "};#",
 ];
 

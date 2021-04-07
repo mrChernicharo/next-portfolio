@@ -2,6 +2,7 @@
   background: var(--background);
   color: var(--paragraph);
   min-height: 100vh;
+  padding-top: 4rem;
 }
 
 .container main {

@@ -25,7 +25,8 @@ export default function Home() {
 
             <p>
               and I <span>❤︎ </span>
-              to build things with <span>{`{ code }`}</span>
+              to build things with <wbr />
+              <span>{`{ code }`}</span>
             </p>
           </motion.h1>
           <main>

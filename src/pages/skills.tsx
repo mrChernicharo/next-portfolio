@@ -58,7 +58,7 @@ export default function skills() {
           return (
             category === selectedCategory && (
               <section key={`section-${category}`}>
-                <nav>
+                <menu>
                   {categoryIndex > 0 ? (
                     <button onClick={prevBtnPress} type="button">
                       <FaChevronLeft />
@@ -76,7 +76,7 @@ export default function skills() {
                   ) : (
                     <div className={styles.buttonPlaceholder}></div>
                   )}
-                </nav>
+                </menu>
 
                 <Category key={`category-${category}`} category={category} />
               </section>
@@ -125,7 +125,7 @@ const Category: React.FC<CategoryProps> = ({ category }: CategoryProps) => {
 const SkillItem: React.FC<SkillProps> = ({ skill }: SkillProps) => {
   return (
     <div className={styles.skillListItem}>
-      <motion.img src={skill.logo} width={30} height={30} />
+      <motion.img src={skill.logo} width={36} height={36} />
     </div>
   );
 };
@@ -139,7 +139,7 @@ const SkillDetail: React.FC<SkillProps> = ({ skill }: SkillProps) => {
     <div className={styles.detail}>
       <h1>{skill.name}</h1>
 
-      <motion.img src={skill.logo} width={60} height={60} />
+      <motion.img src={skill.logo} width={120} height={120} />
 
       <p>{skill.xpTime}</p>
       <div className={styles.starsContainer}>
