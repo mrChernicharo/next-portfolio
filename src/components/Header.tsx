@@ -9,28 +9,37 @@ import { FaHome } from "react-icons/fa";
 
 interface Props {}
 const hasWindow = typeof window !== "undefined";
+
+const width = () => (hasWindow ? window.innerWidth : null);
+let height = () => (hasWindow ? window.innerHeight : null);
+
 function getScreenSize() {
-  const width = hasWindow ? window.innerWidth : null;
-  const height = hasWindow ? window.innerHeight : null;
   return {
-    width,
-    height,
+    width: width(),
+    height: height(),
   };
 }
 
 const Header = () => {
-  const [screenSize, setscreenSize] = useState(getScreenSize());
+  const [screenSize, setScreenSize] = useState(getScreenSize());
 
+  function handleResize() {
+    const size = getScreenSize();
+    setScreenSize(size);
+  }
   //listen to resize
   useEffect(() => {
-    function handleResize() {
-      setscreenSize(getScreenSize());
-      console.log(screenSize);
-    }
+    // if (hasWindow) {
 
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
+    // }
   }, []);
+
+  useEffect(() => {
+    console.log(screenSize);
+  }, [screenSize]);
 
   return (
     <header className={styles.container}>

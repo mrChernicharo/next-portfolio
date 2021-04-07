@@ -16,6 +16,7 @@ import {
 
 import { getXPTime } from "../utils/date-helpers";
 import { skillsData, techCategories, Skill } from "../data/skills";
+import { isEven } from "../utils/math-helpers";
 
 interface SkillProps {
   skill: Skill;
@@ -58,13 +59,23 @@ export default function skills() {
             category === selectedCategory && (
               <section key={`section-${category}`}>
                 <nav>
-                  <button onClick={prevBtnPress} type="button">
-                    <FaChevronLeft />
-                  </button>
+                  {categoryIndex > 0 ? (
+                    <button onClick={prevBtnPress} type="button">
+                      <FaChevronLeft />
+                    </button>
+                  ) : (
+                    <div className={styles.buttonPlaceholder}></div>
+                  )}
+
                   <span>{category}</span>
-                  <button onClick={nextBtnPress} type="button">
-                    <FaChevronRight />
-                  </button>
+
+                  {categoryIndex < techCategories.length - 1 ? (
+                    <button onClick={nextBtnPress} type="button">
+                      <FaChevronRight />
+                    </button>
+                  ) : (
+                    <div className={styles.buttonPlaceholder}></div>
+                  )}
                 </nav>
 
                 <Category key={`category-${category}`} category={category} />
@@ -113,18 +124,13 @@ const Category: React.FC<CategoryProps> = ({ category }: CategoryProps) => {
 
 const SkillItem: React.FC<SkillProps> = ({ skill }: SkillProps) => {
   return (
-    <div>
-      <h3>{skill.name}</h3>
-
+    <div className={styles.skillListItem}>
       <motion.img src={skill.logo} width={30} height={30} />
     </div>
   );
 };
 
 const SkillDetail: React.FC<SkillProps> = ({ skill }: SkillProps) => {
-  const isEven = (number: number) => {
-    return number % 2 === 0;
-  };
   const starsArr = Array(10) // [1,1,1,1,1,1,1,0,0,0]
     .fill(0)
     .map((item, i) => (skill.level > i ? 1 : 0));
@@ -136,24 +142,33 @@ const SkillDetail: React.FC<SkillProps> = ({ skill }: SkillProps) => {
       <motion.img src={skill.logo} width={60} height={60} />
 
       <p>{skill.xpTime}</p>
-
-      {starsArr.map((number, i) => {
-        return (
-          <>
-            {number === 1 ? (
-              isEven(i) ? (
-                <FaStarHalf className={styles.star} size={20} color={"#fff"} />
+      <div className={styles.starsContainer}>
+        {starsArr.map((number, i) => {
+          return (
+            <>
+              {number === 1 ? (
+                isEven(i) ? (
+                  <FaStarHalf
+                    className={styles.star}
+                    size={20}
+                    color={"#fff"}
+                  />
+                ) : (
+                  <FaStarHalf
+                    className={styles.star}
+                    size={20}
+                    color={"#fff"}
+                  />
+                )
+              ) : !isEven(i) ? (
+                <FaStarHalf className={styles.star} size={20} color={"#336"} />
               ) : (
-                <FaStarHalf className={styles.star} size={20} color={"#fff"} />
-              )
-            ) : !isEven(i) ? (
-              <FaStarHalf className={styles.star} size={20} color={"#336"} />
-            ) : (
-              <FaStarHalf className={styles.star} size={20} color={"#336"} />
-            )}
-          </>
-        );
-      })}
+                <FaStarHalf className={styles.star} size={20} color={"#336"} />
+              )}
+            </>
+          );
+        })}
+      </div>
     </div>
   );
 };

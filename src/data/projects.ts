@@ -27,7 +27,7 @@ const appVideos = {
 
 console.log(skillsList);
 
-export const appProjects = [
+export const appProjects: Project[] = [
   {
     title: "Real Beat Maker",
     description: "Beat Maker app",
