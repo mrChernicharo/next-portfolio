@@ -39,6 +39,7 @@ function ContactForm() {
   }
   return (
     <div className={styles.contactForm}>
+      <h2>Send me a message 🤙🏽</h2>
       <form
         onSubmit={handleSubmit}
         method="POST"

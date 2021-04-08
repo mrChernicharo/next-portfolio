@@ -50,7 +50,8 @@
   list-style: none;
 
   display: grid;
-  grid-template-columns: repeat(12, 1rem);
+  grid-template-columns: repeat(12, 1.5rem);
+  grid-auto-rows: 2rem;
   place-items: center;
   grid-gap: 3rem;
   /* justify-items: center; */
@@ -58,13 +59,17 @@
 
 @media screen and (max-width: 900px) {
   .category ul {
-    grid-template-columns: repeat(10, 1rem);
+    grid-template-columns: repeat(10, 1.25rem);
   }
 }
 
 @media screen and (max-width: 720px) {
+  .container menu {
+    padding: 0 1rem;
+  }
   .category ul {
     grid-template-columns: repeat(8, 1rem);
+    grid-auto-rows: 1.8rem;
   }
 }
 
@@ -80,7 +85,7 @@
 }
 
 .category li {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   width: 44px;
   height: 44px;
   display: flex;
@@ -92,8 +97,8 @@
 
 .category li:hover {
   opacity: 0.9;
-  transform: scale(1.1);
-  box-shadow: 2px 0px 5px 0px var(--paragraph);
+  transform: scale(1.2);
+  /* box-shadow: 2px 0px 5px 0px var(--paragraph); */
 }
 
 .detail {

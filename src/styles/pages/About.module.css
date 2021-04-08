@@ -4,3 +4,12 @@
   min-height: 100vh;
   padding-top: 4rem;
 }
+.container li {
+  /* border: 1px solid; */
+  width: fit-content;
+  height: 1.85rem;
+}
+
+.container li svg {
+  vertical-align: sub;
+}

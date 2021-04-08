@@ -27,6 +27,14 @@ const skillsListFactory = (data: Skill[]) => {
 
 export const skillsData: Skill[] = [
   {
+    name: "Css",
+    category: "languages",
+    start: new Date(2018, 10, 18),
+    xpTime: "",
+    logo: "icons/css.svg",
+    level: 9,
+  },
+  {
     name: "Angular",
     category: "frameworks",
     start: new Date(2020, 4, 1),
@@ -82,14 +90,7 @@ export const skillsData: Skill[] = [
     logo: "icons/bootstrap.svg",
     level: 7,
   },
-  {
-    name: "Css",
-    category: "languages",
-    start: new Date(2018, 10, 18),
-    xpTime: "",
-    logo: "icons/css.svg",
-    level: 9,
-  },
+
   {
     name: "d3",
     category: "libraries",

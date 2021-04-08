@@ -7,28 +7,17 @@ import styles from "../styles/components/Header.module.css";
 import Logo from "./Logo";
 import { FaHome, FaHamburger } from "react-icons/fa";
 import { FiMenu, FiList } from "react-icons/fi";
+import { getLocation, getScreenSize } from "../utils/window-helper";
 
 interface DropdownProps {
   closeDropdown: () => void;
   location: string;
 }
-const hasWindow = typeof window !== "undefined";
-
-const width = () => (hasWindow ? window.innerWidth : null);
-let height = () => (hasWindow ? window.innerHeight : null);
-const getLocation = () => (hasWindow ? window.location.pathname : null);
-
-function getScreenSize() {
-  return {
-    width: width(),
-    height: height(),
-  };
-}
 
 const Header = () => {
   const [screenSize, setScreenSize] = useState(getScreenSize());
-  const [showDropdown, setShowDropdown] = useState(false);
   const [location, setLocation] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
 
   function handleResize() {
     const size = getScreenSize();
@@ -99,7 +88,7 @@ const Header = () => {
 
         {screenSize.width < 600 && (
           <div className={styles.dropdownMenu}>
-            <FiMenu size={40} onClick={toggleDropdown} />
+            <FiMenu size={36} onClick={toggleDropdown} />
 
             {showDropdown && (
               <HeaderDropdown

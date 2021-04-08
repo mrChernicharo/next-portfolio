@@ -22,16 +22,18 @@ const About = () => {
   return (
     <div className={styles.container}>
       <Header />
-      <h2>About</h2>
+      <h1>About</h1>
       <main>
-        <h1>Felipe who?</h1>
+        <h2>Felipe who?</h2>
 
         <div className="links-list">
           <ul>
+            {/* <li> <strong>Phone:</strong> +55 21 98878-8359 </li> */}
+
             <li>
               <span>
                 <strong>
-                  <FaStar /> Date of Birth:&nbsp;
+                  <FaStar size={20} /> Date of Birth:&nbsp;
                 </strong>
                 April 29th, 1987
               </span>
@@ -39,42 +41,52 @@ const About = () => {
             <li>
               <span>
                 <strong>
-                  <FiMapPin /> Current Location:&nbsp;
+                  <FiMapPin size={20} /> Current Location:&nbsp;
                 </strong>
                 Rio de Janeiro - Brazil
               </span>
             </li>
-            {/* <li> <strong>Phone:</strong> +55 21 98878-8359 </li> */}
             <li>
-              <strong>
-                <FiMail /> string7dev@gmail&nbsp;
-              </strong>
               <Link href="https://string7dev@gmail.com">
-                <a target="_blank"></a>
+                <a target="_blank">
+                  <span>
+                    <strong>
+                      <FiMail size={20} /> string7dev@gmail&nbsp;
+                    </strong>
+                  </span>
+                </a>
               </Link>
             </li>
             <li>
-              <strong>
-                <FaLinkedin /> Felipe Chernicharo&nbsp;
-              </strong>
               <Link href="https://linkedin.com/in/felipe-chernicharo-27ba911a8/">
-                <a target="_blank"></a>
+                <a target="_blank">
+                  <strong>
+                    <FaLinkedin size={20} /> Felipe Chernicharo&nbsp;
+                    <span></span>
+                  </strong>
+                </a>
               </Link>
             </li>
             <li>
-              <strong>
-                <FaGithub /> mrChernicharo&nbsp;
-              </strong>
               <Link href="https://github.com/mrChernicharo">
-                <a target="_blank"></a>
+                <a target="_blank">
+                  <span>
+                    <strong>
+                      <FaGithub size={20} /> mrChernicharo&nbsp;
+                    </strong>
+                  </span>
+                </a>
               </Link>
             </li>
             <li>
-              <strong>
-                <FaStackOverflow /> Felipe
-              </strong>
               <Link href="https://stackoverflow.com/users/13111779/felipe-chernicharo">
-                <a target="_blank"></a>
+                <a target="_blank">
+                  <span>
+                    <strong>
+                      <FaStackOverflow size={20} /> Felipe&nbsp;
+                    </strong>
+                  </span>
+                </a>
               </Link>
             </li>
           </ul>

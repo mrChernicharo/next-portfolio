@@ -1,6 +1,7 @@
 :root {
   /* Elements */
   --background: #0f0e17;
+  --surface: #17141d;
   --headline: #fffffe;
   --paragraph: #a7a9be;
   --button: #ff8906;
@@ -44,22 +45,32 @@ a {
 }
 
 button {
-  color: var(--text);
+  /* 
   background: var(--highlight);
-  border: 2px solid var(--paragraph);
-  font-weight: bold;
-  border-radius: 1.25rem;
+   */
+  color: var(--text);
+  background: var(--background);
+  border: 1px solid var(--paragraph);
+  border-radius: 0.25rem;
   height: 2.25rem;
   min-width: 4.5rem;
   cursor: pointer;
-  transition: 0.3s;
-  outline: none;
+  color: inherit;
+  background: transparent;
+  font-weight: bold;
+  transition: ease-in-out 0.2s;
+  /* transition: 0.3s; */
+  /* outline: none; */
 }
 
 button:hover {
-  opacity: 0.8;
-  color: var(--text);
-  background: var(--secondary);
+  color: var(--background);
+  border: 2px solid var(--highlight);
+  background: linear-gradient(90deg, #ff8a00, #e52e71) !important;
+  text-shadow: none;
+  -webkit-text-fill-color: var(--background);
+  -webkit-background-clip: text;
+  background-clip: text !important;
 }
 
 input,

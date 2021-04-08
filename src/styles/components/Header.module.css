@@ -9,7 +9,7 @@
   left: 0;
   top: 0;
   z-index: 4;
-  background: var(--background);
+  background: var(--surface);
 }
 .container div {
   display: flex;
@@ -32,6 +32,7 @@
 .dropdownMenu > svg {
   cursor: pointer;
   transition: 0.25s;
+  margin: 0 0.6rem;
   color: var(--highlight);
 }
 
