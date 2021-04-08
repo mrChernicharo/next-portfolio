@@ -85,10 +85,12 @@ textarea {
   cursor: pointer;
   outline: none;
   padding: 0 1rem;
+  box-shadow: 0px 0px 12px inset var(--surface);
 }
 
 textarea {
   padding: 1rem;
+  overflow: hidden;
 }
 
 ul {

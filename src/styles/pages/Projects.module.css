@@ -139,9 +139,9 @@
   /* border-color: white; */
 }
 
-/* .links {
-  border: 1px solid;
-} */
+.links svg {
+  vertical-align: middle;
+}
 
 @media screen and (max-width: 1000px) {
   .item {

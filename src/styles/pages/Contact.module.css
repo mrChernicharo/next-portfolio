@@ -15,8 +15,18 @@
   flex-direction: column;
   max-width: 35rem;
 }
+.contactForm form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
 
-.contactForm form:focus {
+.contactForm form div label {
+  padding: 0 0.5rem 0.75rem;
+}
+
+.contactForm textarea {
+  height: 10rem;
 }
 
 .contactForm button {
