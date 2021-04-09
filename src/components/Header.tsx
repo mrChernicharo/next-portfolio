@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
@@ -11,6 +11,10 @@ import { getLocation, getScreenSize } from "../utils/window-helper";
 
 interface DropdownProps {
   closeDropdown: () => void;
+  location: string;
+}
+
+interface HeaderLinkProps {
   location: string;
 }
 
@@ -52,39 +56,7 @@ const Header = () => {
         <span>Portfolio</span>
       </div>
       <nav>
-        {screenSize.width >= 600 && (
-          <>
-            <Link href="/">
-              <motion.a className={location === "/" ? styles.active : ""}>
-                Home
-              </motion.a>
-            </Link>
-            <Link href="/projects">
-              <motion.a
-                className={location === "/projects" ? styles.active : ""}
-              >
-                Projects
-              </motion.a>
-            </Link>
-            <Link href="/skills">
-              <motion.a className={location === "/skills" ? styles.active : ""}>
-                Skills
-              </motion.a>
-            </Link>
-            <Link href="/about">
-              <motion.a className={location === "/about" ? styles.active : ""}>
-                About
-              </motion.a>
-            </Link>
-            <Link href="/contact">
-              <motion.a
-                className={location === "/contact" ? styles.active : ""}
-              >
-                Contact
-              </motion.a>
-            </Link>
-          </>
-        )}
+        {screenSize.width >= 600 && <HeaderLinks location={location} />}
 
         {screenSize.width < 600 && (
           <div className={styles.dropdownMenu}>
@@ -116,31 +88,7 @@ const HeaderDropdown: React.FC<DropdownProps> = ({
   return (
     <>
       <div className={styles.dropdown}>
-        <Link href="/">
-          <motion.a className={location === "/" ? styles.active : ""}>
-            Home
-          </motion.a>
-        </Link>
-        <Link href="/projects">
-          <motion.a className={location === "/projects" ? styles.active : ""}>
-            Projects
-          </motion.a>
-        </Link>
-        <Link href="/skills">
-          <motion.a className={location === "/skills" ? styles.active : ""}>
-            Skills
-          </motion.a>
-        </Link>
-        <Link href="/about">
-          <motion.a className={location === "/about" ? styles.active : ""}>
-            About
-          </motion.a>
-        </Link>
-        <Link href="/contact">
-          <motion.a className={location === "/contact" ? styles.active : ""}>
-            Contact
-          </motion.a>
-        </Link>
+        <HeaderLinks location={location} />
       </div>
 
       <div
@@ -152,6 +100,37 @@ const HeaderDropdown: React.FC<DropdownProps> = ({
   );
 };
 
-export default Header;
+const HeaderLinks = ({ location }: HeaderLinkProps) => {
+  return (
+    <>
+      <Link href="/">
+        <motion.a className={location === "/" ? styles.active : ""}>
+          Home
+        </motion.a>
+      </Link>
+      <Link href="/projects">
+        <motion.a className={location === "/projects" ? styles.active : ""}>
+          Projects
+        </motion.a>
+      </Link>
+      <Link href="/skills">
+        <motion.a className={location === "/skills" ? styles.active : ""}>
+          Skills
+        </motion.a>
+      </Link>
+      <Link href="/about">
+        <motion.a className={location === "/about" ? styles.active : ""}>
+          About
+        </motion.a>
+      </Link>
+      <Link href="/contact">
+        <motion.a className={location === "/contact" ? styles.active : ""}>
+          Contact
+        </motion.a>
+      </Link>
+    </>
+  );
+};
 
+export default Header;
 /* <FaHome size={22} /> */

@@ -15,12 +15,18 @@
   display: flex;
   padding: 1.5rem;
   overflow-x: scroll;
+
+  /* extiliza scrollbars no Firefox */
+  scrollbar-color: white rebeccapurple;
+  scrollbar-width: thin;
+  overflow-y: hidden;
 }
 
 .container main::-webkit-scrollbar {
   /* width: 2px; */
   height: 10px;
 }
+
 .container main::-webkit-scrollbar-thumb {
   background: #201c29;
   border-radius: 10px;
@@ -66,6 +72,11 @@
 /* levanta um pouquinho o card focado */
 .item:hover {
   transform: translateY(-1rem);
+  /* background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text; */
 }
 
 /* todos os cards menos o primeiro tem margin-left negativo */
@@ -74,18 +85,20 @@
 }
 
 .item header {
-  /* empurra o conteúdo todo pra baixo */
-  margin-bottom: 0.75rem;
+  /* border: 1px solid; */
+  /* position: absolute;
+  height: calc(100% - 4rem);
+  width: 100%;
+  width: 100;
+  z-index: 3000;
+  cursor: pointer;
+  transform: translate(-1rem, -1rem); */
 }
 
 .item header h2 {
   font-size: 1.5rem;
-  margin: 0.25rem 0 auto;
-  text-decoration: none;
-  color: inherit;
+  margin: 1rem 0 0 1rem;
   border: 0;
-  display: inline-block;
-  cursor: pointer;
   transition: ease-in-out 0.2s;
 
   overflow: hidden;
@@ -93,8 +106,7 @@
   white-space: nowrap;
 }
 
-.item header h2:hover {
-  /* border-bottom: 2px solid blue; */
+.item header:hover {
   background: linear-gradient(90deg, #ff8a00, #e52e71);
   text-shadow: none;
   -webkit-text-fill-color: transparent;
@@ -114,7 +126,7 @@
 
 .techContainer {
   display: flex;
-  margin: -0.25rem 0 0.5rem;
+  /* margin: 2.3rem 0 0.5rem; */
 }
 
 .techContainer a {
@@ -141,6 +153,30 @@
 
 .links svg {
   vertical-align: middle;
+}
+
+.ProjectModal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: calc(100vw - 30%);
+  max-width: 900px;
+  top: 50%;
+  left: 50%;
+  background: var(--surface);
+  transform: translate(-50%, -50%);
+}
+
+.Overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (max-width: 1000px) {

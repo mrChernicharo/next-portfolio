@@ -1,15 +1,16 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import { appProjects, Project } from "../data/projects";
 import { FaGithub, FaWifi } from "react-icons/fa";
-import { BiWorld } from "react-icons/bi";
+import { BiFontSize, BiWorld } from "react-icons/bi";
 
 import styles from "../styles/pages/Projects.module.css";
 import { skillsList } from "../data/skills";
 import { getScreenSize } from "../utils/window-helper";
+import { getCardSplashSize, getModalImgSize } from "../utils/project-helper";
 interface ProjectProps {
   project: Project;
   // screenSize: { width: number; height: number };
@@ -17,6 +18,20 @@ interface ProjectProps {
 
 export default function Projects() {
   const [screenSize, setScreenSize] = useState(getScreenSize());
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  function toggleProjectModal(project) {
+    // console.log(project);
+    setSelectedProject(project);
+    setShowModal(!showModal);
+  }
+
+  useEffect(() => {
+    console.log(selectedProject);
+    console.log(showModal);
+  }, [showModal]);
+
   const projectsData = useRef(appProjects);
 
   useEffect(() => {
@@ -29,38 +44,27 @@ export default function Projects() {
       <h1>Projects</h1>
       <main>
         {projectsData.current.map((project) => (
-          <ProjectItem key={project.title} project={project} />
+          <div onClick={() => toggleProjectModal(project)}>
+            <ProjectItem key={project.title} project={project} />
+          </div>
         ))}
       </main>
+
+      {showModal && selectedProject && (
+        <div
+          className={styles.Overlay}
+          onClick={() => toggleProjectModal(selectedProject)}
+        >
+          <ProjectModal project={selectedProject} />
+        </div>
+      )}
     </div>
   );
 }
 
 const ProjectItem: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
-  const size = { borderRadius: 0, width: 0, height: 0, margin: 0 };
+  const size = getCardSplashSize(project);
 
-  switch (project.size) {
-    case 1:
-      size.height = 250;
-      size.width = 120;
-      size.borderRadius = 14;
-      // size.margin = 100;
-      break;
-    case 2:
-      size.height = 230;
-      size.width = 260;
-      size.borderRadius = 6;
-      // size.margin = 30;
-      break;
-    case 3:
-      size.height = 200;
-      size.width = 300;
-      size.borderRadius = 4;
-      // size.margin = 10;
-      break;
-    default:
-      break;
-  }
   return (
     <div className={styles.item}>
       <section>
@@ -116,16 +120,41 @@ const ProjectItem: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
             </span>
           </button>
         </div>
-
-        {/* <p>{project.description}</p> */}
-
-        {/* {project.gif && <motion.img src={project.gif} width={50} height={40} />} */}
-
-        {/* 
-      {project.video && (
-        <video src={project.video} autoPlay width={300} height={200}></video>
-      )} */}
       </section>
     </div>
+  );
+};
+
+const ProjectModal: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
+  const size = getModalImgSize(project);
+
+  useEffect(() => console.log(project.size), []);
+  return (
+    <>
+      <div className={styles.ProjectModal}>
+        <h1>{project.title}</h1>
+
+        <p>{project.description}</p>
+
+        <div>
+          {project.video ? (
+            <video
+              src={project.video}
+              autoPlay
+              width={size.width}
+              height={size.height}
+            ></video>
+          ) : project.gif ? (
+            <motion.img
+              src={project.gif}
+              width={size.width}
+              height={size.height}
+            />
+          ) : (
+            ""
+          )}
+        </div>
+      </div>
+    </>
   );
 };

@@ -30,7 +30,7 @@ const appVideos = {
   bFlatSet: "videos/b-flat-set.mp4",
 };
 
-console.log(skillsList);
+// console.log(skillsList);
 
 export const appProjects: Project[] = [
   {
