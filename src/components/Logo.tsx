@@ -32,16 +32,16 @@ const pathVariants = {
   },
 };
 
-const HeaderLayout: React.FC = ({ children }) => {
-  return (
-    <>
-      {children}
-      <Logo />
-    </>
-  );
-};
+// const HeaderLayout: React.FC = ({ children }) => {
+//   return (
+//     <>
+//       <Logo />
+//       {children}
+//     </>
+//   );
+// };
 
-const Logo = () => {
+export default function Logo() {
   return (
     <div className="logo">
       <motion.svg
@@ -142,8 +142,6 @@ const Logo = () => {
       </motion.svg> */}
     </div>
   );
-};
-
-export default HeaderLayout;
+}
 
 // export default Logo;

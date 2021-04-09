@@ -6,6 +6,7 @@ export interface Project {
   github: string;
   techs: Skill[];
   size: number;
+  date: Date;
   splash?: string;
   url?: string;
   gif?: string;
@@ -20,6 +21,8 @@ export const appGifs = {
   iRecipe: "gifs/i-recipe.gif",
   angularCrud: "gifs/angular_crud.gif",
   ecoleta: "gifs/ecoleta.gif",
+  d3:
+    "https://raw.githubusercontent.com/mrChernicharo/d3/master/src/assets/d3.bubble.gif",
 };
 
 const appVideos = {
@@ -40,6 +43,7 @@ export const appProjects: Project[] = [
     url: "https://real-beat-maker.vercel.app/",
     gif: null,
     video: appVideos.beatMaker,
+    date: new Date(2020, 3, 29),
     techs: [skillsList["Typescript"], skillsList["React"]],
     splash: "img/real-beat-maker.png",
     size: 3,
@@ -50,8 +54,9 @@ export const appProjects: Project[] = [
       "SVG studies. Chart and graph renderings. Shapes, Scales, Interactions, Generators, SVG Paths, Data transformations and Transitions",
     github: "https://github.com/mrChernicharo/d3",
     url: null,
-    gif: null,
+    gif: appGifs.d3,
     video: null,
+    date: new Date(2020, 3, 29),
     techs: [skillsList["Javascript"], skillsList["d3"]],
     splash: "img/d3.png",
     size: 3,
@@ -64,6 +69,7 @@ export const appProjects: Project[] = [
     url: null,
     gif: null,
     video: appVideos.pizzajoint,
+    date: new Date(2020, 3, 29),
     techs: [skillsList["Javascript"], skillsList["React"]],
     splash: "img/pizzajoint.png",
     size: 3,
@@ -74,7 +80,8 @@ export const appProjects: Project[] = [
     github: "https://mel-da-terra-verde-app.web.app/produtos",
     url: "https://mel-da-terra-verde-app.web.app/produtos",
     gif: null,
-    video: null,
+    video: appVideos.melDaTerraVerde,
+    date: new Date(2020, 3, 29),
     techs: [
       skillsList["Typescript"],
       skillsList["Angular"],
@@ -84,18 +91,19 @@ export const appProjects: Project[] = [
     splash: "img/mel-da-terra-verde.png",
     size: 2,
   },
-  // {
-  //   title: "Angular CRUD",
-  //   description:
-  //     "Angular CRUD app powered by Angular Material and JSON.Server. Load, create, update and delete products.",
-  //   github: "https://github.com/mrChernicharo/angular-crud",
-  //   url: null,
-  //   gif: appGifs.angularCrud,
-  //   video: null,
-  //   techs: [skillsList["Typescript"], skillsList["Angular"]],
-  //   splash: "",
-  //   size: 3,
-  // },
+  {
+    title: "Angular CRUD",
+    description:
+      "Angular CRUD app powered by Angular Material and JSON.Server. Load, create, update and delete products.",
+    github: "https://github.com/mrChernicharo/angular-crud",
+    url: null,
+    gif: appGifs.angularCrud,
+    video: null,
+    date: new Date(2020, 3, 29),
+    techs: [skillsList["Typescript"], skillsList["Angular"]],
+    splash: "img/angular-crud.png",
+    size: 3,
+  },
   {
     title: "GoMarketplace",
     description:
@@ -104,6 +112,7 @@ export const appProjects: Project[] = [
     url: null,
     gif: appGifs.goMarketplace,
     video: null,
+    date: new Date(2020, 3, 29),
     techs: [
       skillsList["React Native"],
       skillsList["Javascript"],
@@ -120,6 +129,7 @@ export const appProjects: Project[] = [
     url: "https://i-recipe-b5b67.web.app/auth",
     gif: appGifs.iRecipe,
     video: null,
+    date: new Date(2020, 3, 29),
     techs: [
       skillsList["Typescript"],
       skillsList["Angular"],
@@ -136,6 +146,7 @@ export const appProjects: Project[] = [
     url: null,
     gif: appGifs.ecoleta,
     video: null,
+    date: new Date(2020, 3, 29),
     techs: [skillsList["React Native"], skillsList["node"]],
     splash: "img/ecoleta.png",
     size: 1,
@@ -147,6 +158,7 @@ export const appProjects: Project[] = [
     url: "https://bflatset.web.app/songs",
     gif: "",
     video: appVideos.bFlatSet,
+    date: new Date(2020, 3, 29),
     techs: [
       skillsList["Typescript"],
       skillsList["Angular"],
@@ -164,6 +176,7 @@ export const appProjects: Project[] = [
     url: null,
     gif: appGifs.mosquitoKiller,
     video: null,
+    date: new Date(2020, 3, 29),
     techs: [skillsList["Python"], skillsList["pygame"]],
     splash: "img/mosquito-killer.png",
     size: 3,
@@ -176,6 +189,7 @@ export const appProjects: Project[] = [
     url: null,
     gif: appGifs.carRush,
     video: null,
+    date: new Date(2020, 3, 29),
     techs: [skillsList["Python"], skillsList["pygame"]],
     splash: "img/car-rush.png",
     size: 2,
@@ -188,6 +202,7 @@ export const appProjects: Project[] = [
     url: null,
     gif: appGifs.phpTodoApp,
     video: null,
+    date: new Date(2020, 3, 29),
     techs: [skillsList["Php"]],
     splash: "img/lista-tarefas.png",
     size: 3,

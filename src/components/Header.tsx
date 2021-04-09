@@ -8,6 +8,7 @@ import Logo from "./Logo";
 import { FaHome, FaHamburger } from "react-icons/fa";
 import { FiMenu, FiList } from "react-icons/fi";
 import { getLocation, getScreenSize } from "../utils/window-helper";
+import HeaderLayout from "./Logo";
 
 interface DropdownProps {
   closeDropdown: () => void;
@@ -51,8 +52,9 @@ const Header = () => {
 
   return (
     <header className={styles.container}>
+      <Logo />
+
       <div>
-        <Logo />
         <span>Portfolio</span>
       </div>
       <nav>

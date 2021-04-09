@@ -7,9 +7,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AnimateSharedLayout>
-      <HeaderLayout>
-        <Component {...pageProps} />
-      </HeaderLayout>
+      <Component {...pageProps} />
     </AnimateSharedLayout>
   );
 }
