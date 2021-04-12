@@ -4,6 +4,15 @@
   min-height: 100vh;
   padding-top: 4rem;
 }
+
+.container h1 {
+  margin: 1rem 2rem 0;
+}
+
+.container main {
+  margin: 0 2rem;
+}
+
 .container li {
   /* border: 1px solid; */
   width: fit-content;
@@ -12,4 +21,8 @@
 
 .container li svg {
   vertical-align: sub;
+}
+
+.container main a:hover:not(button > a) {
+  text-shadow: 0px 0px 3px var(--paragraph);
 }

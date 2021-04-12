@@ -5,6 +5,10 @@
   padding-top: 4rem;
 }
 
+.container h1 {
+  margin: 1rem 2rem 1rem;
+}
+
 .item {
   box-shadow: 10px 5px 33px -7px rgba(167, 169, 190, 0.66);
   -webkit-box-shadow: 10px 5px 33px -7px rgba(167, 169, 190, 0.66);

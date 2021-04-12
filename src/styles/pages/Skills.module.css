@@ -5,6 +5,10 @@
   padding-top: 4rem;
 }
 
+.container h1 {
+  margin: 1rem 2rem 0;
+}
+
 .container main {
   display: flex;
   /* width: 600vw; */
