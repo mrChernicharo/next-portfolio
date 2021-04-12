@@ -6,7 +6,8 @@
 }
 
 .contactForm {
-  border: 1px solid var(--paragraph);
+  /* border: 1px solid var(--paragraph); */
+  text-align: center;
 }
 
 .contactForm form {
@@ -23,6 +24,7 @@
 
 .contactForm form div label {
   padding: 0 0.5rem 0.75rem;
+  text-align: start;
 }
 
 .contactForm textarea {
@@ -49,7 +51,13 @@
   transition: background-color 5000s ease-in-out 0s; */
   color: var(--text);
   -webkit-text-fill-color: var(--text);
-  background: var(--highlight);
+  background: transparent;
   transition: background-color 5000s ease-in-out 0s;
   border: 2px solid var(--paragraph);
+}
+
+@media screen and (max-width: 600px) {
+  .contactForm {
+    padding: 0 2rem;
+  }
 }

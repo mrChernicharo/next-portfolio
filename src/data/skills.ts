@@ -248,7 +248,7 @@ export const skillsData: Skill[] = [
     category: "libraries",
     start: new Date(2020, 5, 9),
     xpTime: "",
-    logo: "icons/ngRx.svg",
+    logo: "icons/ngrx.svg",
     level: 5,
   },
   {

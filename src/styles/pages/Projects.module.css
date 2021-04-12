@@ -110,6 +110,7 @@
 
 .techContainer {
   display: flex;
+  margin-bottom: 1rem;
 }
 
 .techContainer div + div {
@@ -132,8 +133,8 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  width: calc(100vw - 30%);
-  max-width: 900px;
+  min-width: 320px;
+  max-width: 800px;
   top: 50%;
   left: 50%;
   background: var(--surface);
@@ -141,6 +142,9 @@
 }
 .ProjectModal h1 {
   margin: 0;
+}
+.ProjectModal p {
+  padding: 0 2.5rem;
 }
 
 .Links button:hover {
@@ -161,10 +165,10 @@
 
 .Overlay {
   position: absolute;
-  width: 10000vw;
-  height: 10000vh;
-  top: -1000vh;
-  left: -1000vh;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
   z-index: 10;
   background: rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -228,6 +232,15 @@
 
   .splashContainer img {
     transform: scale(0.92);
+  }
+  .ProjectModal video,
+  .ProjectModal img:not(.techContainer div img) {
+    /* border: 1px solid red; */
+    transform: scale(0.7);
+  }
+
+  .techContainer {
+    margin-bottom: -2rem;
   }
 }
 

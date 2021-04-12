@@ -27,9 +27,7 @@ const Contact = () => {
 export default Contact;
 
 function ContactForm() {
-  const [state, handleSubmit] = useForm("mbjqjgkw", {
-    endpoint: "https://formspree.io/f/mbjqjgkw",
-  });
+  const [state, handleSubmit] = useForm("mbjqjgkw");
   if (state.succeeded) {
     return (
       <div className={styles.contactForm}>
@@ -42,8 +40,8 @@ function ContactForm() {
       <h2>Send me a message 🤙🏽</h2>
       <form
         onSubmit={handleSubmit}
-        method="POST"
-        action="https://formspree.io/f/mbjqjgkw"
+        // method="POST"
+        // action="https://formspree.io/f/mbjqjgkw"
       >
         <div>
           <label htmlFor="email">Email Address</label>

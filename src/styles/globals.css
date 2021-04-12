@@ -80,7 +80,7 @@ button:hover {
 input,
 textarea {
   color: var(--text);
-  background: var(--highlight);
+  background: var(--tertiary);
   border: 2px solid var(--paragraph);
   font-weight: bold;
   border-radius: 1.25rem 1.25rem 0rem 1.25rem;
