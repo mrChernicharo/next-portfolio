@@ -179,15 +179,6 @@
   color: var(--highlight);
 }
 .container p:nth-child(1) span:nth-child(55) {
-  color: var(--highlight);
-}
-.container p:nth-child(1) span:nth-child(56) {
-  color: var(--highlight);
-}
-.container p:nth-child(1) span:nth-child(57) {
-  color: var(--paragraph);
-}
-.container p:nth-child(1) span:nth-child(58) {
   color: var(--paragraph);
 }
 

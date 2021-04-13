@@ -6,7 +6,7 @@ import styles from "../styles/components/CodeIntro.module.css";
 interface Props {}
 
 const introTextArr = [
-  "import { FelipeChernicharo } from ‘software-developer’;#",
+  "import { SoftwareDeveloper } from ‘felipe-chernicharo’;#",
   "var helloStranger = `welcome to my ${Portfolio}`;#",
   "soGladYouHere( ) {#",
   "_{ please: ‘take a look around’ },#",

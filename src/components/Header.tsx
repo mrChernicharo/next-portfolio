@@ -52,9 +52,9 @@ const Header = () => {
 
   return (
     <header className={styles.container}>
-      <Logo />
-
       <div>
+        <Logo />
+
         <span>Portfolio</span>
       </div>
       <nav>
