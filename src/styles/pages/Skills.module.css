@@ -116,6 +116,7 @@
 .starsContainer {
   /* border: 1px solid var(--paragraph); */
   min-width: 278px;
+  margin-top: 1.25rem;
   padding-left: 76px;
 }
 
@@ -143,6 +144,11 @@
 .star:nth-of-type(9),
 .star:nth-of-type(10) {
   left: -4rem;
+}
+
+.timeParagraph {
+  /* border: 1px solid var(--highlight); */
+  margin-top: 0.25rem;
 }
 
 .buttonPlaceholder {

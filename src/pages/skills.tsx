@@ -141,8 +141,8 @@ const SkillDetail: React.FC<SkillProps> = ({ skill }: SkillProps) => {
 
       <motion.img src={skill.logo} width={120} height={120} />
 
-      <p>{skill.xpTime}</p>
       <div className={styles.starsContainer}>
+        <span style={{ verticalAlign: "top" }}>Skill Level &nbsp;&nbsp;</span>
         {starsArr.map((number, i) => {
           return (
             <>
@@ -169,6 +169,12 @@ const SkillDetail: React.FC<SkillProps> = ({ skill }: SkillProps) => {
           );
         })}
       </div>
+
+      <p className={styles.timeParagraph}>
+        <span>First used </span>
+        {skill.xpTime}
+        <span> ago.</span>
+      </p>
     </div>
   );
 };
