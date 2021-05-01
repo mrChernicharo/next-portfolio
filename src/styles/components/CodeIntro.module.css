@@ -7,7 +7,6 @@
   min-width: 20rem;
   padding: 0;
   /* border-radius: 6px; */
-  /* border: 4px double var(--highlight); */
   /* padding: 16px; */
   /* background: var(--background); */
 }
@@ -20,7 +19,7 @@
 
 @media screen and (max-width: 520px) {
   .container {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 }
 .container p:nth-child(1) span:nth-child(1) {

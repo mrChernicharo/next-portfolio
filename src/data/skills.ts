@@ -32,7 +32,7 @@ export const skillsData: Skill[] = [
     start: new Date(2018, 10, 23),
     xpTime: "",
     logo: "icons/javascript.svg",
-    level: 9,
+    level: 10,
   },
   {
     name: "Css",
@@ -48,7 +48,7 @@ export const skillsData: Skill[] = [
     start: new Date(2018, 8, 2),
     xpTime: "",
     logo: "icons/html5.svg",
-    level: 9,
+    level: 10,
   },
   {
     name: "Typescript",
@@ -56,7 +56,7 @@ export const skillsData: Skill[] = [
     start: new Date(2020, 3, 12),
     xpTime: "",
     logo: "icons/typescript.svg",
-    level: 8,
+    level: 9,
   },
 
   {
@@ -89,7 +89,7 @@ export const skillsData: Skill[] = [
     start: new Date(2020, 4, 1),
     xpTime: "",
     logo: "icons/angular.svg",
-    level: 8,
+    level: 9,
   },
   {
     name: "Apple",
@@ -348,7 +348,7 @@ export const skillsData: Skill[] = [
     start: new Date(2019, 2, 11),
     xpTime: "",
     logo: "icons/database.svg",
-    level: 5,
+    level: 6,
   },
   {
     name: "Visual Studio Code",
@@ -477,7 +477,7 @@ export const skillsData: Skill[] = [
     start: new Date(2021, 1, 11),
     xpTime: "",
     logo: "icons/puppeteer.svg",
-    level: 6,
+    level: 5,
   },
   {
     name: "pygame",
@@ -485,7 +485,7 @@ export const skillsData: Skill[] = [
     start: new Date(2019, 8, 1),
     xpTime: "",
     logo: "icons/pygame.png",
-    level: 6,
+    level: 7,
   },
   {
     name: "redux",
@@ -549,7 +549,7 @@ export const skillsData: Skill[] = [
     start: new Date(2021, 3, 2),
     xpTime: "",
     logo: "icons/three.png",
-    level: 4,
+    level: 3,
   },
 
   {
@@ -566,7 +566,7 @@ export const skillsData: Skill[] = [
     start: new Date(2020, 1, 6),
     xpTime: "",
     logo: "icons/vim.svg",
-    level: 5,
+    level: 4,
   },
   {
     name: "vue",
@@ -574,7 +574,7 @@ export const skillsData: Skill[] = [
     start: new Date(2021, 3, 1),
     xpTime: "",
     logo: "icons/vue.svg",
-    level: 9,
+    level: 5,
   },
   {
     name: "Wamp",

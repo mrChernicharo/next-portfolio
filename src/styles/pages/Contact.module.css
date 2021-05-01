@@ -5,6 +5,10 @@
   padding-top: 4rem;
 }
 
+.container main h1 {
+  margin: 1rem 2rem 0;
+}
+
 .contactForm {
   /* border: 1px solid var(--paragraph); */
   text-align: center;

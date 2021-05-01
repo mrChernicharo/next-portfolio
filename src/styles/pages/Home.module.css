@@ -13,6 +13,8 @@
 }
 .body h1 {
   font-size: 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--paragraph);
 }
 
 .body h1 p:first-child {
@@ -20,7 +22,7 @@
 }
 
 .body h1 p:last-child {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 .body p span {
   color: var(--secondary);
@@ -35,4 +37,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 581px) {
+  .body h1 {
+    font-size: 3rem;
+  }
+  .body h1 p:last-child {
+    font-size: 1.5rem;
+  }
 }

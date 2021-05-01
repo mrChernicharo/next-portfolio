@@ -49,7 +49,7 @@ function ContactForm() {
             id="email"
             type="email"
             name="email"
-            placeholder="→ your@email.com"
+            placeholder="⊚ your.email@here.com"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
@@ -59,7 +59,7 @@ function ContactForm() {
           <textarea
             id="message"
             name="message"
-            placeholder="→ your message here"
+            placeholder="⊚ your message here"
           />
           <ValidationError
             prefix="Message"
