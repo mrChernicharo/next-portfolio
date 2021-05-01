@@ -68,6 +68,14 @@ export const skillsData: Skill[] = [
     level: 6,
   },
   {
+    name: "Rust",
+    category: "languages",
+    start: new Date(2021, 3, 30),
+    xpTime: "",
+    logo: "icons/rust.svg",
+    level: 2,
+  },
+  {
     name: "Php",
     category: "languages",
     start: new Date(2018, 11, 21),
@@ -575,6 +583,14 @@ export const skillsData: Skill[] = [
     xpTime: "",
     logo: "icons/wamp.svg",
     level: 5,
+  },
+  {
+    name: "WebAssembly",
+    category: "tools",
+    start: new Date(2021, 4, 1),
+    xpTime: "",
+    logo: "icons/web-assembly.svg",
+    level: 2,
   },
   {
     name: "webpack",

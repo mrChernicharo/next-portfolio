@@ -45,13 +45,22 @@ function ContactForm() {
       >
         <div>
           <label htmlFor="email">Email Address</label>
-          <input id="email" type="email" name="email" />
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="→ your@email.com"
+          />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
 
         <div>
           <label htmlFor="message">Your Message</label>
-          <textarea id="message" name="message" />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="→ your message here"
+          />
           <ValidationError
             prefix="Message"
             field="message"

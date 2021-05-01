@@ -80,20 +80,21 @@ button:hover {
 input,
 textarea {
   color: var(--text);
-  background: var(--tertiary);
-  border: 2px solid var(--paragraph);
+  background: var(--surface);
+  border: 2px solid var(--tertiary);
   font-weight: bold;
+  font-family: "Fira Code", sans-serif;
+  color: var(--tertiary);
   border-radius: 1.25rem 1.25rem 0rem 1.25rem;
   min-height: 2.25rem;
   min-width: 4.5rem;
   cursor: pointer;
   outline: none;
-  padding: 0 1rem;
-  box-shadow: 0px 0px 12px inset var(--surface);
+  padding: 1rem;
+  box-shadow: 0px 0px 12px inset var(--tertiary);
 }
 
 textarea {
-  padding: 1rem;
   overflow: hidden;
   max-height: 300px;
   min-width: 300px;

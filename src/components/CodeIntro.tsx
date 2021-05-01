@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { motion, transform } from "framer-motion";
+import { nanoid } from "nanoid";
 
 import styles from "../styles/components/CodeIntro.module.css";
 
 interface Props {}
 
 const introTextArr = [
-  "import { SoftwareDeveloper } from ‘felipe-chernicharo’;#",
-  "var helloStranger = `welcome to my ${Portfolio}`;#",
-  "soGladYouHere( ) {#",
-  "_{ please: ‘take a look around’ },#",
-  "_{ see: ‘a little bit of my work and...’}#",
-  "_return wheneverYouLike();#",
-  "};#",
+  "import { SoftwareDeveloper } from ‘felipe-chernicharo’;",
+  "var helloStranger = `welcome to my ${Portfolio}`;",
+  "soGladYouHere( ) {",
+  "_{ please: ‘take a look around’ },",
+  "_{ see: ‘a little bit of my work and...’}",
+  "_return wheneverYouLike();",
+  "};",
 ];
 
 const divVars = {
@@ -42,18 +43,13 @@ const spanVars = {
   done: { display: "inline" },
 };
 
-// function generateClassNames() {
-//   for (let [i, p] of Object.entries(introTextArr)) {
-//     const paragraph = `.container p:nth-child(${Number(i) + 1})`;
-
-//     for (let [j, span] of Object.entries(p.split(""))) {
-//       const spanText = `span:nth-child(${Number(j) + 1})`;
-
-//       console.log(paragraph + spanText);
-//     }
-//   }
-// }
-// generateClassNames();
+const bleepVars = {
+  hidden: { opacity: 1 },
+  animate: {
+    opacity: [0, 1, 0],
+    transition: { yoyo: Infinity, duration: 0.5 },
+  },
+};
 
 const CodeIntro = () => {
   return (
@@ -64,24 +60,23 @@ const CodeIntro = () => {
       animate="done"
     >
       {introTextArr.map((line, i) => (
-        <motion.p
-          variants={pVars(i)}
-          key={line + Math.random()}
-          className={"p-" + line}
-        >
+        <motion.p variants={pVars(i)} key={nanoid()} className={"p-" + i}>
           {line
-            .replace("#", "")
             .replace("_", " ")
             .split("")
-            .map((l, i) => (
+            .map((letter, i) => (
               <motion.span
                 className={"span-" + i}
                 variants={spanVars}
-                key={l + Math.random()}
+                key={nanoid()}
               >
-                {l}
+                {letter}
               </motion.span>
             ))}
+
+          {/* <motion.span className={styles.bleepCursor} variants={bleepVars}>
+            &nbsp;
+          </motion.span> */}
         </motion.p>
       ))}
     </motion.div>
