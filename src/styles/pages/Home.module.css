@@ -14,7 +14,7 @@
 .body h1 {
   font-size: 4rem;
   text-align: center;
-  border-bottom: 1px solid var(--paragraph);
+  /* border-bottom: 1px solid var(--paragraph); */
 }
 
 .body h1 p:first-child {

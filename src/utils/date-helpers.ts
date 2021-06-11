@@ -1,55 +1,33 @@
-export function getXPTime(startDate, name) {
-  const timeDiff = startDate.getTime() - new Date().getTime();
+import { intervalToDuration } from "date-fns";
 
-  let daysDiff = Math.abs(Math.round(timeDiff / (24 * 3600 * 1000)));
-  let monthsDiff = Math.floor(daysDiff / 30);
-  let yearsDiff = Math.floor(daysDiff / 365);
+export function getXPTime(startDate: Date) {
+  const duration = intervalToDuration({
+    start: new Date(startDate),
+    end: new Date(),
+  });
 
-  let years = "";
-  let months = "";
-  let days = "";
+  let [years, months, days] = ["", "", ""];
 
-  let subMonths = yearsDiff * 12;
-  let subDays = monthsDiff * 30;
-
-  monthsDiff = monthsDiff - subMonths;
-  daysDiff = daysDiff - subDays;
-
-  if (yearsDiff > 0) {
-    years = yearsDiff === 1 ? "1 year" : `${yearsDiff} years`;
+  if (duration.years > 0) {
+    years = duration.years === 1 ? "1 year" : `${duration.years} years`;
+  }
+  if (duration.months > 0) {
+    months = duration.months === 1 ? "1 month" : `${duration.months} months`;
+  }
+  if (duration.days > 0) {
+    days = duration.days === 1 ? "1 day" : `${duration.days} days`;
   }
 
-  if (monthsDiff > 0) {
-    months = monthsDiff === 1 ? "1 month" : `${monthsDiff} months`;
-  }
+  let response = [years, months, days].filter(Boolean);
 
-  if (daysDiff > 0) {
-    days = daysDiff === 1 ? "1 day" : `${daysDiff} days`;
+  switch (response.length) {
+    case 3:
+      response[1] += " and";
+      response[0] += ",";
+      break;
+    case 2:
+      response[0] += " and";
+      break;
   }
-
-  if (years && !months && days) {
-    return `${years} and ${days}`;
-  }
-
-  if (years && !months && !days) {
-    return `${years}`;
-  }
-
-  if (years && months) {
-    return `${years} and ${months}`;
-  }
-
-  if (!years && months && days) {
-    return `${months} and ${days}`;
-  }
-
-  if (!years && months && !days) {
-    return `${months} `;
-  }
-
-  if (!years && !months && days) {
-    return `${days}`;
-  }
-
-  return String(years + months + days);
+  return response.join(" ");
 }

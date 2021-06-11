@@ -30,20 +30,20 @@ const About = () => {
           <ul>
             {/* <li> <strong>Phone:</strong> +55 21 98878-8359 </li> */}
 
-            <li>
+            {/* <li>
               <span>
                 <strong>
                   <FaStar size={20} /> Date of Birth:&nbsp;
                 </strong>
                 April 29th, 1987
               </span>
-            </li>
+            </li> */}
             <li>
               <span>
                 <strong>
                   <FiMapPin size={20} /> Current Location:&nbsp;
                 </strong>
-                Rio de Janeiro - Brazil
+                Washington DC
               </span>
             </li>
             <li>
@@ -91,7 +91,7 @@ const About = () => {
             </li>
           </ul>
 
-          <p>33 year old Brazilian Web | Systems | Solutions Developer</p>
+          <p>Web | Systems | Solutions Developer</p>
           <p>Coding since 2018</p>
         </div>
 
